@@ -16,7 +16,7 @@ jobs:
       - name: Initialize Go Module
         run: |
           if [ ! -f go.mod ]; then
-            go mod init https://github.com/kapsedivya31/lab5.git
+            go mod init github.com/kapsedivya31/lab5
           fi
 
       - name: Build 
