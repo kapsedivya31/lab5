@@ -13,5 +13,11 @@ jobs:
         with: 
           go-version: '1.21.5' 
 
+      - name: Initialize Go Module
+        run: |
+          if [ ! -f go.mod ]; then
+            go mod init https://github.com/kapsedivya31/lab5.git
+          fi
+
       - name: Build 
         run: go build -v ./...
